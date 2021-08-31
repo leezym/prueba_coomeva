@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title> Usuarios afiliados </title>
+</head>
+<body>
+	<div align="center">
+		<h3 th:inline="text">Bienvenido(a) [[${#httpServletRequest.remoteUser}]]</h3>
+
+		<form th:action="@{/logout}" method="post">
+    		<input type="submit" value="Logout" />
+		</form>
+
+		<h1> Usuarios Afiliados</h1>
+		<a href="new"> Crear un nuevo usuario</a>
+		</br>
+		<table border="1" cellpadding="10">
+			<thead>
+				<tr>CC</tr>
+				<tr>NOMBRE</tr>
+				<tr>APELLIDO</tr>
+				<tr>CORREO</tr>
+				<tr>CELULAR</tr>
+			</thead>
+		</table>
+	</div>
+</body>
+</html>
